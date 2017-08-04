@@ -12,10 +12,7 @@ app.use(express.static("public/assets"));
 // // Parse application/x-www-form-urlencoded
 // app.use(bodyParser.urlencoded({ extended: false }));
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.text());
-app.use(bodyParser.json({ type: "application/vnd.api+json" }));
+app.use(bodyParser.urlencoded({ extended: false }));
 
 
 // Override with POST having ?_method=DELETE
