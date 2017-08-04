@@ -1,29 +1,31 @@
 {
   "name": "burger",
   "version": "1.0.0",
-  "description": "The Great Burger",
+  "description": "The Burger",
   "main": "server.js",
-  "dependencies": {
-    "body-parser": "^1.17.2",
-    "express-handlebars": "^3.0.0",
-    "express": "^4.15.3",
-    "method-override": "^2.3.9",
-    "mysql": "^2.14.1",
-    "sql": "^0.77.0"
-  },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/rweitman/burger.git"
+    "url": "git+https://github.com/rweitman/burger.git"
   },
+  "keywords": [
+    "burger"
+  ],
   "author": "Roberto",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/rweitman/burger/issues"
   },
-  "homepage": "https://github.com/rweitman/burger#readme"
+  "homepage": "https://github.com/rweitman/burger#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "express-handlebars": "^3.0.0",
+    "foobar": "^1.1.0",
+    "method-override": "^2.3.9",
+    "mysql": "^2.14.1"
+  }
 }
