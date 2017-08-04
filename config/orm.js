@@ -4,14 +4,14 @@ var orm = {
   selectAll: function(tableName, cb) {
     var queryString = "SELECT * FROM ??";
     connection.query(queryString, [tableName],function(err, data) {
-      if (err) throw (err);
+      if (err) {throw (err);}
       cb(data);
     });
   },
   insertOne: function(tableName, category, vals, cb) {
     var queryString = "INSERT INTO ?? (??) VALUES (?)";
     connection.query(queryString, [tableName,category,vals], function(err, data) {
-       if (err) throw (err);
+       if (err) {throw (err);}
       cb(data);
     });
 },
@@ -20,7 +20,7 @@ var orm = {
     var queryString = "UPDATE ?? SET ?? = ?  WHERE ?? = ?";
 
     connection.query(queryString, [tableName,boolVar, boolVal, idVar, identify], function(err, data) {
-        if (err) throw (err);
+        if (err) {throw (err);}
      cb(data);
     });
   }
