@@ -4,8 +4,10 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
+   "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rweitman/burger.git"
@@ -23,9 +25,6 @@
     "method-override": "^2.3.9",
     "mysql": "^2.14.1",
     "sql": "^0.77.0"
-  },
-   "scripts": {
-       "start": "node server.js"
   }
 
 }
