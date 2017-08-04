@@ -4,8 +4,6 @@ var router = express();
 
 var eaten = require("../models/burger.js");
 
-var connection = require('../config/connection.js');
-
 // var orm = {
 
 // selectAll: function(tableName, cb) {
