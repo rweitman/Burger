@@ -1,13 +1,13 @@
 var express = require("express");
-var bodyParser = require("body-parser");
-var methodOverride = require("method-override");
 
 var app = express();
 
-var PORT = process.env.PORT || 3000;
-
-
 app.use(express.static("public/assets"));
+
+var bodyParser = require("body-parser");
+var methodOverride = require("method-override");
+
+var PORT = process.env.PORT || 3000;
 
 // // Parse application/x-www-form-urlencoded
 // app.use(bodyParser.urlencoded({ extended: false }));
