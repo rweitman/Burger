@@ -2,12 +2,12 @@ var express = require("express");
 
 var app = express();
 
-// app.use(express.static("public/assets"));
+app.use(express.static("public/assets"));
 
 var bodyParser = require("body-parser");
 var methodOverride = require("method-override");
 
-var PORT = process.env.PORT || 3000;
+// var PORT = process.env.PORT || 3000;
 
 // // Parse application/x-www-form-urlencoded
 // app.use(bodyParser.urlencoded({ extended: false }));
@@ -27,6 +27,6 @@ var routes = require("./controllers/burgers_controller.js");
 
 app.use("/", routes);
 
-app.listen(PORT, function() {
-	console.log("listening on 3000");
+app.listen(process.env.PORT || 3000, function(){
+  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 });
