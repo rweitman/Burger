@@ -7,7 +7,7 @@ app.use(express.static("public/assets"));
 var bodyParser = require("body-parser");
 var methodOverride = require("method-override");
 
-// var PORT = process.env.PORT || 3000;
+var PORT = process.env.PORT || 3000;
 
 // // Parse application/x-www-form-urlencoded
 // app.use(bodyParser.urlencoded({ extended: false }));
@@ -27,6 +27,55 @@ var routes = require("./controllers/burgers_controller.js");
 
 app.use("/", routes);
 
-app.listen(process.env.PORT || 3000, function(){
-  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+app.listen(PORT, function() {
+  console.log("Listening on PORT 3000");
 });
+
+
+
+// const SocketServer = require('ws').Server;
+// const path = require('path');
+
+// const PORT = process.env.PORT || 3000;
+
+// const server = express()
+//   .listen(PORT, () => console.log(`Listening on ${ PORT }`));
+
+// const wss = new SocketServer({ server });
+
+// wss.on('connection', (ws) => {
+//   console.log('Client connected');
+//   ws.on('close', () => console.log('Client disconnected'));
+// });
+
+// setInterval(() => {
+//   wss.clients.forEach((client) => {
+//     client.send(new Date().toTimeString());
+//   });
+// }, 1000);
+
+// 'use strict';
+
+// const express = require('express');
+// const SocketServer = require('ws').Server;
+// const path = require('path');
+
+// const PORT = process.env.PORT || 3000;
+// const INDEX = path.join(__dirname, '/');
+
+// const server = express()
+//   .use((req, res) => res.sendFile(INDEX) )
+//   .listen(PORT, () => console.log(`Listening on ${ PORT }`));
+
+// const wss = new SocketServer({ server });
+
+// wss.on('connection', (ws) => {
+//   console.log('Client connected');
+//   ws.on('close', () => console.log('Client disconnected'));
+// });
+
+// setInterval(() => {
+//   wss.clients.forEach((client) => {
+//     client.send(new Date().toTimeString());
+//   });
+// }, 1000);
