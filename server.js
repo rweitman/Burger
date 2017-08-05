@@ -2,7 +2,7 @@ var express = require("express");
 
 var app = express();
 
-app.use(express.static("public/assets"));
+// app.use(express.static("public/assets"));
 
 var bodyParser = require("body-parser");
 var methodOverride = require("method-override");
