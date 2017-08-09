@@ -7,10 +7,10 @@ app.use(express.static("public/assets"));
 var bodyParser = require("body-parser");
 var methodOverride = require("method-override");
 
-var uri = "mysql://b9758dbe35fd1b:404e0b58@us-cdbr-iron-east-05.cleardb.net/heroku_190559482844405";
+var concept = "mysql://b9758dbe35fd1b:404e0b58@us-cdbr-iron-east-05.cleardb.net/heroku_190559482844405?reconnect=true";
 
 
-var PORT = uri || 3000;
+var PORT = concept.PORT || 3000;
 
 // // Parse application/x-www-form-urlencoded
 // app.use(bodyParser.urlencoded({ extended: false }));
