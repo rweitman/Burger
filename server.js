@@ -9,7 +9,7 @@ var methodOverride = require("method-override");
 
 var MONGODB_URI = require("./config/connection.js");
 
-var PORT = process.env.MONGODB_URI || 3000;
+var MONGODB_URI = process.env.MONGODB_URI || 3000;
 
 // // Parse application/x-www-form-urlencoded
 // app.use(bodyParser.urlencoded({ extended: false }));
@@ -29,7 +29,7 @@ var routes = require("./controllers/burgers_controller.js");
 
 app.use("/", routes);
 
-app.listen(PORT, function() {
+app.listen(MONGODB_URI, function() {
   console.log("Listening on PORT 3000");
 });
 
