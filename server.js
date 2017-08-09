@@ -7,9 +7,12 @@ app.use(express.static("public/assets"));
 var bodyParser = require("body-parser");
 var methodOverride = require("method-override");
 
-var MONGODB_URI = require("./config/connection.js");
+var mongodbUri = require("mongodb-uri");
 
-var MONGODB_URI = process.env.MONGODB_URI || 3000;
+var uri = "mysql://b9758dbe35fd1b:404e0b58@us-cdbr-iron-east-05.cleardb.net/heroku_190559482844405?reconnect=true";
+
+
+var PORT = process.env.uri || 3000;
 
 // // Parse application/x-www-form-urlencoded
 // app.use(bodyParser.urlencoded({ extended: false }));
@@ -29,7 +32,7 @@ var routes = require("./controllers/burgers_controller.js");
 
 app.use("/", routes);
 
-app.listen(MONGODB_URI, function() {
+app.listen(PORT, function() {
   console.log("Listening on PORT 3000");
 });
 
