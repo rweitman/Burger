@@ -8,9 +8,9 @@ var orm = {
       cb(data);
     });
   },
-  insertOne: function(tableName, category, vals, idVar, identify, cb) {
-    var queryString = "INSERT INTO ?? (??) VALUES (?) WHERE ?? = ?";
-    connection.query(queryString, [tableName,category,vals,idVar,identify], function(err, data) {
+  insertOne: function(tableName, category, vals, cb) {
+    var queryString = "INSERT INTO ?? (??) VALUES (?)";
+    connection.query(queryString, [tableName,category,vals], function(err, data) {
        if (err) {throw (err);}
       cb(data);
     });
