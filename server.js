@@ -7,7 +7,9 @@ app.use(express.static("public/assets"));
 var bodyParser = require("body-parser");
 var methodOverride = require("method-override");
 
-var PORT = process.env.PORT || 3000;
+var MONGODB_URI = require("./config/connection.js");
+
+var PORT = process.env.MONGODB_URI || 3000;
 
 // // Parse application/x-www-form-urlencoded
 // app.use(bodyParser.urlencoded({ extended: false }));
