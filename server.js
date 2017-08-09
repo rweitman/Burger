@@ -10,7 +10,7 @@ var methodOverride = require("method-override");
 var uri = "mysql://b9758dbe35fd1b:404e0b58@us-cdbr-iron-east-05.cleardb.net/heroku_190559482844405?reconnect=true";
 
 
-var PORT = uri || 3000;
+// var PORT = uri || 3000;
 
 // // Parse application/x-www-form-urlencoded
 // app.use(bodyParser.urlencoded({ extended: false }));
@@ -30,7 +30,7 @@ var routes = require("./controllers/burgers_controller.js");
 
 app.use("/", routes);
 
-app.listen(PORT, function() {
+app.listen(uri, function() {
   console.log("Listening on PORT 3000");
 });
 
