@@ -4,20 +4,20 @@ var orm = require("../config/orm.js");
 
 var eaten = {
   selectAll: function (cb) {
-    orm.selectAll("heroku_190559482844405.burgers", function(res){
+    orm.selectAll("z5t1435ep5v9l7gn.burgers", function(res){
 
       cb(res);
     });
 },
 
   insertOne: function(bun, cb) {
-    orm.insertOne("heroku_190559482844405.burgers", "burger_name", bun, function(res){
+    orm.insertOne("z5t1435ep5v9l7gn.burgers", "burger_name", bun, function(res){
 
       cb(res);
       });
 },
    updateOne: function(id, cb) {
-    orm.updateOne("heroku_190559482844405.burgers", "devoured", true, "id", id, function(res){
+    orm.updateOne("z5t1435ep5v9l7gn.burgers", "devoured", true, "id", id, function(res){
 
       cb(res);
     });
