@@ -11,7 +11,7 @@ var eaten = {
 },
 
   insertOne: function(bun, cb) {
-    orm.insertOne("heroku_190559482844405.burgers", "burger_name", bun, function(res){
+    orm.insertOne("heroku_190559482844405.burgers", "burger_name", bun, "id", id, function(res){
 
       cb(res);
       });
